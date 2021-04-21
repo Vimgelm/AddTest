@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/public/css/cabinet/cabinet.css">
+<div>
+    <?php if(isset($data)): ?>
+    <div class="test_list d-inline">
+        <?php for($i = 0; $i < count($data); $i++): ?>
+        <!--send ajax test id-->
+        <div>
+            <span class="d-inline" id="<?php echo 'answers' . $data[$i]['id'];?>" ><?php echo $data[$i]['name'] ;?></span>
+                <div class="d-inline"><?php echo $data[$i]['count_answer'] ;?></div>
+                <img id="complete_star" src="/public/images/icon/complete_star.png" alt="done">
+            </div>
+            <?php endfor; ?>
+        </div>
+        <?php endif; ?>
+    </div>

@@ -1,0 +1,94 @@
+<!--add custom css for this page-->
+<link rel="stylesheet" type="text/css" href="/public/css/newtest/newtest.css">
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+
+        <h1>Add your test?</h1>
+        <div class="alert"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <form action="" type="post" class="form-all">
+                <div class="form-group">
+                    <label class="" for="name">Test name:</label>
+                    <input class="col-sm-8 form-control" type="text" name="name" min="1" required>
+                    <div id="name" class="col-sm-4 error"></div>
+                </div>
+                <div class="form-group">
+                    <label class="" for="">Description:</label>
+                    <input class="col-sm-8 form-control" type="text" name="description">
+                    <div id="description" class="col-sm-4 error"></div>
+                </div>
+
+                <div class="form-row">
+                    <label class="left col-sm-2 col-form-label" for="">tags:</label>
+                    <input class="col-sm-6 form-control" type="text" name="tags">
+                    <div id="tags" class="col-sm-4 error"></div>
+                </div>
+                <br>
+                <div class="form-group question_block" id="1">
+                    <div class="form-row">
+                        <label class="col-sm-3 quest_label" for="">Question #1</label>
+                        <input class="col-sm-5 form-control" type="text" name="1[question]">
+                        <div id="10" class=" col-sm-4 error"></div>
+                    </div>
+                    <div class="form-row">
+                        <label class="col-sm-2" for="">answer1:</label>
+                        <div class="col-sm-6 form-check">
+                            <input class="form-check-input" type="checkbox" value="1" name="1[checkbox1]"></input>
+                            <input class="form-control" type="text" name="1[answer1]">
+                        </div>
+                        <div id="11" class="col-sm-4 error"></div>
+                    </div>
+                    <div class="form-row">
+                        <label class="col-sm-2" for="">answer2:</label>
+                        <div class="col-sm-6 form-check">
+                            <input class="form-check-input" type="checkbox" value="1" name="1[checkbox2]"></input>
+                            <input class="form-control" type="text" name="1[answer2]">
+                        </div>
+                        <div id="12" class="col-sm-4 error"></div>
+                    </div>
+                    <div class="form-row">
+                        <label class="col-sm-2" for="">answer3:</label>
+                        <div class="col-sm-6 form-check">
+                            <input class="form-check-input" type="checkbox" value="1" name="1[checkbox3]"></input>
+                            <input class="form-control" type="text" name="1[answer3]">
+                        </div>
+                        <div id="13" class="col-sm-4 error"></div>
+                    </div>
+                    <div class="form-row">
+                        <label class="col-sm-2" for="">answer4:</label>
+                        <div class="col-sm-6 form-check">
+                            <input class="form-check-input" type="checkbox" value="1" name="1[checkbox4]"></input>
+                            <input class="form-control" type="text" name="1[answer4]">
+                        </div>
+                        <div id="14" class="col-sm-4 error"></div>
+                    </div>
+
+                    <!--                    this div always at the end-->
+                    <div class="del_butn"></div>
+                </div>
+                <input class="btn btn-dark add_quest" type="button" value="Add question"></input>
+                <input class="btn btn-primary save" type="button" value="Save test"></input>
+        </div>
+        <div class="col-lg-4">
+            <?php if (!isset($_SESSION['user_id'])): ?>
+            <div>
+                <p>If wish get result:</p>
+                <a class="" href="/register">Registration</a>
+            </div>
+            <h1 style="color: #0c5460">OR</h1>
+            <div class="form-group">
+                <label class="label-default" for="email">Email:</label>
+                <input class="form-control" id="email" type="email" name="email">
+            </div>
+            <?php endif;?>
+        </div>
+        </form>
+
+    </div>
+    <!--js script for this page-->
+    <script src="/public/js/newtest/newtest_form.js"></script>
+    <script src="/public/js/newtest/validate_form.js"></script>

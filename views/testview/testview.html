@@ -1,0 +1,49 @@
+<!--add custom css for this page-->
+<link rel="stylesheet" type="text/css" href="/public/css/testview/testview.css">
+
+<div class="row">
+    <div class="col-6">
+        <div id="errors" class="title"></div>
+
+        <h3><?php echo $data->getName();?></h3>
+        <?php echo $data->getDescription();?>
+
+        <form id="check_form" action="" method="post">
+            <input type="hidden" name="check" value="1"></input>
+            <?php for($i =0; $i <= $data->countArray(); $i++):?>
+
+            <div id="erors" class="<?php echo $i; ?>"></div>
+
+            <div>
+                <label><?php echo $data->getQuestion($i);?></label>
+            </div>
+            <div>
+                <input type="checkbox" value="1" name="<?php echo $i;?>[checkbox1]">
+                <label for=""><?php echo $data->getAnswer1($i);?></label>
+            </div>
+            <div>
+                <input type="checkbox" value=1 name="<?php echo $i;?>[checkbox2]">
+                <label for=""><?php echo $data->getAnswer2($i);?></label>
+            </div>
+            <div>
+                <input type="checkbox" value="1" name="<?php echo $i;?>[checkbox3]">
+                <label for=""><?php echo $data->getAnswer3($i);?></label>
+            </div>
+            <div>
+                <input type="checkbox" value="1" name="<?php echo $i;?>[checkbox4]">
+                <label for=""><?php echo $data->getAnswer4($i);?></label>
+            </div>
+
+            <?php endfor;?>
+
+            <input class="check_test_btn" type="submit" value="Check Test">
+
+        </form>
+    </div>
+    <div class="col-3"></div>
+    <div class="col-3"></div>
+
+</div>
+
+<!--js script for this page-->
+<script rel="script" src="/public/js/testview/check_answer.js"></script>

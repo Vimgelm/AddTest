@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="/public/css/cabinet/cabinet.css">
+
+<div class="alert"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h3>Cabinet!</h3>
+            <div class="d-inline-flex" id="btn_group">
+                <div class="line-butn " id="test_list">test_list</div>
+                <div class="line-butn" id="answer_list">answer_list</div>
+                <div class="line-butn" id="statistic">statistic</div>
+            </div>
+            <div class="data_block d-inline-flex">
+
+            </div>
+            <div class="first_cabinet_block">
+                <?php for($i = 0; $i < count($data); $i++): ?>
+                <div>
+                    <a href="/test/<?php echo $data[$i]['id']; ?>">
+                        <h3><?php echo $data[$i]['name'] ;?></h3>
+                    </a>
+                    <p><?php echo $data[$i]['description']; ?></p>
+
+                </div>
+                <?php endfor; ?>
+            </div>
+
+        </div>
+
+        <div class="col-lg-5">
+        </div>
+        <div class="col-lg-1">
+        </div>
+
+    </div>
+</div>
+
+<!--js script for this page-->
+<script rel="script" src="/public/js/cabinet/common_ajax.js"></script>

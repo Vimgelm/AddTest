@@ -1,0 +1,9 @@
+.box {
+    width: 1000px;
+    height: 100px;
+    margin: 3px;
+    color: #2a6496;
+    border-top: 1px solid dodgerblue;
+    border-right: 1px solid dodgerblue;
+    border-radius: 5px;
+}

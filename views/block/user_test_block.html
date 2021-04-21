@@ -1,0 +1,14 @@
+<div>
+    <?php if(isset($data)): ?>
+    <div class="test_list">
+        <?php for($i = 0; $i < count($data); $i++): ?>
+        <div>
+            <a href="/test/<?php echo $data[$i]['id']; ?>">
+                <div class="d-inline"><?php echo $data[$i]['name'] ;?></div>
+            </a>
+            <div class="d-inline"><?php echo $data[$i]['description']; ?></div>
+        </div>
+        <?php endfor; ?>
+    </div>
+    <?php endif; ?>
+</div>

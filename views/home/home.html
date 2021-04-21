@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/public/css/home/home.css">
+<h3>Home</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div class="">
+                <?php for($i = 0; $i < (count($data)-2); $i++): ?>
+                <div>
+                    <a href="/test/<?php echo $data[$i]['id']; ?>">
+                        <h6><?php echo $data[$i]['name'] ;?></h6>
+                    </a>
+                    <p><?php echo $data[$i]['description']; ?></p>
+
+                </div>
+                <?php endfor; ?>
+            </div>
+
+            <ul class="pagination">
+                <?php for($i = 0; $i < count($data['pagination']); $i++): ?>
+                <?php if($data['current_page'] == $data['pagination'][$i]):?>
+                <li class="page-item active">
+                    <a class="page-link" href="/home/<?php echo $data['pagination'][$i]; ?>">
+                        <?php echo $data['pagination'][$i]; ?>
+                    </a>
+                </li>
+                <?php else :?>
+                <li class="page-item">
+                    <a class="page-link" href="/home/<?php echo $data['pagination'][$i]; ?>">
+                        <?php echo $data['pagination'][$i]; ?>
+                    </a>
+                </li>
+                <?php endif ;?>
+                <?php endfor; ?>
+            </ul>
+
+
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>
+
+
+
+

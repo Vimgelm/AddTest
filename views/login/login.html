@@ -1,0 +1,36 @@
+<!--<link rel="stylesheet" href="/public/css/register/register.css">-->
+
+<div class="alert"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-6">
+            <h3>Login:</h3>
+            <form id="login_form" action="" type="post">
+                <input type="hidden" value="true" name="check"></input>
+
+                <div class ="form-group form-inline">
+                    <label for="login_email">Email Address:</label>
+                    <input class="form-control" id="login_email" type="email" name="email">
+                    <div id="email" class="error"></div>
+                </div>
+                <div class ="form-group form-inline">
+                    <label for="login_password">Enter your password:</label>
+                    <input class="form-control" id="login_password" type="password" name="password">
+                    <div id="password" class="error"></div>
+                </div>
+
+                <div class ="">
+                    <input class="btn btn-primary" id="submit_form" value="Submit" type="submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!--js script for this page-->
+<script rel="script" src="/public/js/login/login_user.js"></script>

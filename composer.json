@@ -1,0 +1,13 @@
+{
+    "name": "vim/addtest",
+    "require": {
+        "twig/twig": "^3.0",
+        "twbs/bootstrap": "4.4.1",
+      "ext-json": "*"
+    },
+
+    "autoload": {
+        "psr-4": {"App\\": "src/"}
+    }
+
+}

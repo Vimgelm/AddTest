@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="/public/css/register/register.css">
+
+<div class="alert"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+<h3>Registration:</h3>
+            <form id="registration_form" action="" type="post">
+            <input type="hidden" value="true" name="check"></input>
+            <div class ="form-group form-inline">
+                <label for="register_nick">Nick:</label>
+                <input class="form-control" id="register_nick" type="text" name="nick">
+                <div id="nick" class="error"></div>
+            </div>
+            <div class ="form-group form-inline">
+                <label for="register_email">Email Address:</label>
+                <input class="form-control" id="register_email" type="email" name="email">
+                <div id="email" class="error"></div>
+            </div>
+            <div class ="form-group form-inline">
+                <label for="register_password">Enter your password:</label>
+                <input class="form-control" id="register_password" type="password" name="password">
+                <div id="password" class="error"></div>
+            </div>
+            <div class ="form-group form-inline">
+                <label for="repeat_password">Repeat password:</label>
+                <input class="form-control" id="repeat_password" type="password" name="repeat_password">
+            </div>
+            <div class ="">
+                <input class="btn btn-primary" id="submit_form" value="Submit" type="submit">
+            </div>
+            </form>
+        </div>
+        <div class="col-lg-3">
+        </div>
+        <div class="col-lg-3">
+
+        </div>
+    </div>
+</div>
+
+<!--js script for this page-->
+<script rel="script" src="/public/js/register/register_user.js"></script>

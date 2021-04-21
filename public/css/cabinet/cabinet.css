@@ -1,0 +1,13 @@
+.line-butn{
+    width: 100px;
+    height: 30px;
+    margin: 3px;
+    color: #2a6496;
+    border-top: 1px solid dodgerblue;
+    border-right: 1px solid dodgerblue;
+    border-radius: 5px;
+}
+#complete_star{
+    width: 15px;
+    height: 15px;
+}
